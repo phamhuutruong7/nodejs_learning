@@ -1,17 +1,5 @@
-console.log();  //console is a global object.
-
-//Example
-setTimeout()
-clearTimeout();
-
-setInterval();
-clearInterval();
-
-window.console.log
-window.setTimeout();
-
+//This line will create an undifined.
+//Reason ist, global Object cant access to message variable
+//They only scope to this file
 var message = '';
-window.message 
-global.setTimeout
-
-console.log(glabel.message)
+console.log(global.message);
