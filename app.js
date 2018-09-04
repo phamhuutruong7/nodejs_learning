@@ -1,9 +1,8 @@
-const logger = require('./logger');
+const log = require('./logger');
 
-logger = 1;     //This line is overwrite 
 
 //console.log(logger);
-logger.log('message');  //This will print the 'message' in log('message') out.
+log('message');  //This will print the 'message' in log('message') out.
 //It can print that out because of the function we write in logger.js
 
 //We shouldnt declade a variable named logger and use it like that.
