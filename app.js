@@ -1,9 +1,15 @@
-const fs = require('fs');
-//We always need to use ASYNCHRONOS method
-//const files = fs.readdirSync('./');
-//console.log(files);
+//Event: a signal that something has happened
+const EventEmittter = require('events'); //load the event module
+//EventEmitter is a class
+const emitter = new EventEmittter(); //constance of this class
 
-fs.readdir('./', function(err, files){
-    if(err) console.log('Error', err);
-    else console.log('Result', files);
+//Register a listener
+emitter.on('messageLogged', function()
+{
+    console.log('Listener called');
 });
+//in on-method has 2 arguments. the first is the name of the method, and the second is the callback, that print out the inside function
+
+//Raise an event
+emitter.emit('messageLogged');
+//Notice: emit = making a noise, produce = signaling
