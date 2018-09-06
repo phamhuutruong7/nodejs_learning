@@ -1,5 +1,5 @@
-(function (exports, require, module, __filename, __dirname) { 
-    console.log(_filename);
+
+    console.log(__filename);
     console.log(__dirname);
     var url ='http://mylogger.io/log';
 
@@ -12,7 +12,7 @@ module.exports = log;
 
 //In runtime, our code will be wrapped into a function like this
 //(function (exports, require, module, __filename, __dirname) { 
-})
+
 
 //This look like a function in javascript
 //Node has a few built in modules that enable us to work with the file system, path objectsm network, operating system, etc
