@@ -1,14 +1,19 @@
+const EventEmitter = require('events');
+//const emitter = new EventEmitter();
 
-    console.log(__filename);
-    console.log(__dirname);
-    var url ='http://mylogger.io/log';
+var url ='http://mylogger.io/log';
 
-function log(message){
-    //Send an HTTP request
-    console.log(message);
+class Logger extends EventEmitter{   //We want that class Logger has all the ability of EventEmitter, then we need to extend it
+    log(message){   //When we define a function inside a class, we dont need that function keyword anymore
+        //Send an HTTP request
+        console.log(message);
+    
+        //Raise an event
+        this.emit('messageLogged', {id: 1, url: 'http://'});    //inside of the function of the class, we use this. instead of emitter.emit()
+    }
 }
 
-module.exports = log;
+module.exports = Logger;
 
 //In runtime, our code will be wrapped into a function like this
 //(function (exports, require, module, __filename, __dirname) { 
