@@ -9,3 +9,6 @@ log('message');  //This will print the 'message' in log('message') out.
 //Cause if we use it like that, we may declare a new value for it.
 //So for the best, we will not declade an object named logger, but we declare
 //an CONSTANT object name logger
+
+//Some useful module in the document list on nodejs.org
+//File, HTTP, OS, Path, Process, Query Strings, Stream...
